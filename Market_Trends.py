@@ -509,8 +509,6 @@ def run_market_trends(language_index, app_title):
                                                   key='candle_scope_tech_indicators')
 
 
-    # Eine horizontale zwei Pixel Linie hinzufügen
-    draw_line(2)
 
     st.bokeh_chart(create_chart(title, candle_scope_data, candle_scope_close_price_line, candle_scope_open_price_line,
                                 candle_scope_low_price_line, candle_scope_high_price_line, candle_scope_tech_indicators,

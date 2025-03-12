@@ -3,7 +3,7 @@ import subprocess
 
 # Definiere die PowerShell-Befehle
 commands = [
-    r"cd D:\Python_Projekte\FinGraph",
+
     r"py -m streamlit run Main.py"
 ]
 
