@@ -5,6 +5,7 @@ import streamlit as st
 from streamlit_navigation_bar import st_navbar
 import Forecasting
 import Portfolio_Performance_Optimization
+import Benchmark
 import Terms_of_Use
 import Market_Trends
 
@@ -95,7 +96,22 @@ translations_main = {
         "Prognoza",  # Polnisch
         "Прогнозирование",  # Russisch
         "Прогнозування"  # Ukrainisch
-    ]}
+    ],
+    6: [
+        "Benchmark",  # Englisch
+        "Benchmark",  # Deutsch
+        "Benchmark",  # Italienisch
+        "Référence",  # Französisch
+        "Referencia",  # Spanisch
+        "Referência",  # Portugiesisch
+        "Jämförelsevärde",  # Schwedisch
+        "Referansepunkt",  # Norwegisch
+        "Benchmark",  # Dänisch
+        "Punkt odniesienia",  # Polnisch
+        "Ориентир",  # Russisch
+        "Орієнтир"  # Ukrainisch
+        ]
+    }
 
 # Mache die Seite so breit wie möglich
 st.set_page_config(page_title="FinGraph", layout="wide")
@@ -192,6 +208,7 @@ pages = [
     f'{translations_main.get(3)[language_index]}',
     f'{translations_main.get(4)[language_index]}',
     f'{translations_main.get(5)[language_index]}',
+    f'{translations_main.get(6)[language_index]}',
 
 ]
 
@@ -338,6 +355,11 @@ else:
     if navigation_bar_top == f'{translations_main.get(5)[language_index]}':
         Forecasting.run_forecasting(language_index,
                                     translations_main.get(5)[language_index])
+
+    # "Benchmark"
+    if navigation_bar_top == f'{translations_main.get(6)[language_index]}':
+        Benchmark.run_benchmark(language_index,
+                                    translations_main.get(6)[language_index])
 
 
 
